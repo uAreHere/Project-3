@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import Employees from './Components/Employees';
+
 
 function App() {
+
+  // const [employees, displayRegistry] = useState(null);
+  // const [loading, setLoading] = useState(false);
+
+
+  // useEffect(function () {
+  //   loadRegistry();
+  // }, []);
+
+  // function loadRegistry() {
+  //   setLoading(true);
+  //   axios.get('https://statenweb.mockable.io/employees').then(function (response) {
+  //     const employeeList = response.data.pop();
+  //     displayRegistry(<p>{employeeList.name} <br /> {employeeList.department} <br /> {employeeList.id}</p>)
+  //     setLoading(false);
+  //   });
+  // };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="container bg-primary">
+        <div>
+          <Employees />
+        </div>
+      </section>
     </div>
   );
 }
